@@ -19,8 +19,8 @@ node {
 	// -- Descarga código desde SCM
 	echo 'Descargando código de SCM'
 
-	checkout scm
-	//checkout scm: [$class: 'GitSCM', branches: [[name: '*/develop']], userRemoteConfigs: [[url: 'https://github.com/anders3118/MDW-SWARM.git']]]
+	//checkout scm
+	checkout scm: [$class: 'GitSCM', branches: [[name: '*/develop']], userRemoteConfigs: [[url: 'https://github.com/anders3118/MDW-SWARM.git']]]
 
 
 	 // -- Compilando
@@ -32,7 +32,7 @@ node {
     // ------------------------------------
     stage 'Install'
     echo 'Instala el paquete generado en el repositorio maven'
-    sh 'mvn install -Dmaven.test.skip=true'
+    sh 'mvn install package -Dmaven.test.skip=true'
 
 
 }
