@@ -11,6 +11,7 @@ import javax.ws.rs.Produces;
 public class HelloWorldEndpoint {
 
 	@GET
+	@Path("/person")
 	@Produces("application/json")
 	public Response doGet() {
 		return Response.ok("{name : \"Anders Barrios\", age:\"27\" }").build();
