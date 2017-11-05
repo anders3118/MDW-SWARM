@@ -1,6 +1,6 @@
 #!groovy
 
-node('develop') {
+node {
 
 	// ---------------------------------
 	// -- COMPILAR
