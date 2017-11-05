@@ -14,7 +14,7 @@ node {
 		env.PATH = "${mvnHome}/bin:${env.PATH}"
 		echo "var mvnHome='${mvnHome}'"
 
-		sh 'mvn -B verify'
+		//sh 'mvn -B verify'
 
 		// -- Descarga código desde SCM
 		echo 'Descargando código de SCM'
