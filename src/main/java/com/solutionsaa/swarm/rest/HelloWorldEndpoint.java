@@ -13,6 +13,6 @@ public class HelloWorldEndpoint {
 	@GET
 	@Produces("application/json")
 	public Response doGet() {
-		return Response.ok("{saludo : \"hola este es un saludo \" }").build();
+		return Response.ok("{name : \"Anders Barrios\", age:\"27\" }").build();
 	}
 }
